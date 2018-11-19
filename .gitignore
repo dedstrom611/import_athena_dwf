@@ -1,0 +1,7 @@
+*.zip
+*.csv
+InContactData.csv
+athena_files_tmp
+*.xlsx
+*.txt
+*.pdf
