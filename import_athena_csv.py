@@ -150,11 +150,11 @@ def load_csv_files_to_pg(s3_obj, keys, bucket, s3prefix, s3columns, localzipfile
 if __name__ == '__main__':
 
     # Postgres credentials
-    prod_host = 'dashboard-clone.cylxp8fwq9cz.us-west-2.rds.amazonaws.com'
-    prod_db = 'dashboard'
-    prod_schema = 'looker_scratch'
-    prod_user = 'bi_user'
-    prod_pw = '01f!uVk8cm%*'
+    prod_host = os.environ['PROD_HOST']
+    prod_db = os.environ['PROD_DB']
+    prod_schema = os.environ['PROD_SCHEMA']
+    prod_user = ['DB_USER']
+    prod_pw = ['PROD_PWD']
 
     #Instantiate boto3 S3 client
     s3 = boto3.client('s3')
